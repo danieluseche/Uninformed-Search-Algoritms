@@ -20,9 +20,9 @@ class UniformCostSearch:
         self.frontier.put(self.nodeState)
         self.explored = set()
         self.solved = False
+        self.solution_path = []
 
     def search(self):
-
 
         self.unexplored_cities = self.cities.copy()
 
@@ -36,6 +36,13 @@ class UniformCostSearch:
         # Add the node to the explored set:
         self.explored.add(self.nodeState)         
 
+        print("*******************************************************************")
+        print("Node:")
+        print("name:"+ chr(self.nodeState.name + 97))
+        print(f"cost: {self.nodeState.cost}")
+        #print("Frontier:")
+        #print([x.cost for x in self.frontier.queue])
+
         # Check if the node is a goal State:
         if self.checkGoal(self.nodeState):
             return self.nodeState
@@ -48,36 +55,35 @@ class UniformCostSearch:
                     cost = self.nodeState.cost + self.TSP.get_weight(self.nodeState.name, city),
                     parent_id = id(self.nodeState)))
 
-        print("\nNode:")
-        print("name:"+ chr(self.nodeState.name + 97))
-        print(f"cost: {self.nodeState.cost}")
-        print("Unexplored: ")
-        print(self.unexplored_cities)
-        print("Frontier:")
-        print([x.cost for x in self.frontier.queue])
 
+        print("Unexplored: ")
+        print([chr(x+97) for x in self.unexplored_cities])
+        print("*******************************************************************")
         #search among frontier nodes
         #self.search()
 
     def checkGoal(self, node):
         
+        if node.name in [x for x in self.unexplored_cities]:
+            self.unexplored_cities.remove(node.name)
+            self.solution_path.append(node.name)
+
+
         if node.parent_id == None: #falta implementar el conteo de ciudades
             #print("found root")
             if len(self.unexplored_cities) == 0:
+                self.solution_path.reverse()
                 self.solved = True
                 return True
             else:
+                self.solution_path = []
                 return False
-            if len(self.unexplored_cities) == 1 and self.unexplored_cities == node.name:
-                self.solved = True
-                return True
-
-
-
+        
         for parent in self.explored:
             if node.parent_id == id(parent):
-                #print(f"going from {self.nodeState.name} to {parent.name}")
+                print(f"going from {chr(node.name+97)} to {chr(parent.name+97)}")
                 self.unexplored_cities.remove(parent.name)
+                self.solution_path.append(parent.name)
                 self.checkGoal(parent)
             
 
@@ -100,13 +106,12 @@ if __name__=='__main__':
     while(True):
         solution = problem.search()
         if problem.solved:
+            print("*********************SOLVED!!!!***************************** ")
             break;
-        #input("Next\n")
 
         if len(problem.frontier.queue) == 0: 
             print("no solution was found")
             break
 
-    if isinstance(solution, Node):
-        print(solution)
 
+    print([chr(x + 97) for x in problem.solution_path])
