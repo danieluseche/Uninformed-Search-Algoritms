@@ -113,5 +113,5 @@ if __name__=='__main__':
             print("no solution was found")
             break
 
-
+    print("Solution path:")
     print([chr(x + 97) for x in problem.solution_path])
