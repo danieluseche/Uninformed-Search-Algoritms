@@ -1,23 +1,12 @@
 #!/usr/bin/bash
 
-$(echo "gr04.tsp" > output.time)
-$(time (python3 uniformCostSearch.py TSP_instances/gr04.tsp) &>> output.time)
-$(echo "*****************************************************">> output.time)
-$(echo "gr10.tsp" >> output.time)
-$(time (python3 uniformCostSearch.py TSP_instances/gr10.tsp) &>> output.time)
-$(echo "*****************************************************">> output.time)
-# $(echo "gr11.tsp" >> output.time)
-# $(time (python3 uniformCostSearch.py TSP_instances/gr12.tsp) &>> output.time)
-# $(echo "*****************************************************">> output.time)
-# $(echo "gr12.tsp" >> output.time)
-# $(time (python3 uniformCostSearch.py TSP_instances/gr12.tsp) &>> output.time)
-# $(echo "*****************************************************">> output.time)
-# $(echo "gr13.tsp" >> output.time)
-# $(time (python3 uniformCostSearch.py TSP_instances/gr13.tsp) &>> output.time)
-# $(echo "*****************************************************">> output.time)
-# $(echo "gr14.tsp" >> output.time)
-# $(time (python3 uniformCostSearch.py TSP_instances/gr14.tsp) &>> output.time)
-# $(echo "*****************************************************">> output.time)
-# $(echo "gr15.tsp" >> output.time)
-# $(time (python3 uniformCostSearch.py TSP_instances/gr15.tsp) &>> output.time)
-# $(echo "*****************************************************">> output.time)
+# Clearing the previous file
+$(> output.time)
+
+# Looping among the travel salesman instances
+for FILE in TSP_instances/*
+do
+$(echo $FILE >> output.time)
+$(time (python3 uniformCostSearch.py $FILE) &>> output.time)
+$(echo '*****************************************************\n'>> output.time)
+done
