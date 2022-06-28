@@ -36,10 +36,10 @@ class UniformCostSearch:
         # Add the node to the explored set:
         self.explored.add(self.nodeState)         
 
-        print("*******************************************************************")
-        print("Node:")
-        print("name:"+ chr(self.nodeState.name + 97))
-        print(f"cost: {self.nodeState.cost}")
+        #print("*******************************************************************")
+        #print("Node:")
+        #print("name:"+ chr(self.nodeState.name + 97))
+        #print(f"cost: {self.nodeState.cost}")
         #print("Frontier:")
         #print([x.cost for x in self.frontier.queue])
 
@@ -56,9 +56,11 @@ class UniformCostSearch:
                     parent_id = id(self.nodeState)))
 
 
-        print("Unexplored: ")
-        print([chr(x+97) for x in self.unexplored_cities])
-        print("*******************************************************************")
+        #print("Unexplored: ")
+        #print([chr(x+97) for x in self.unexplored_cities])
+        #print("*******************************************************************")
+        
+        #trying to made it recursive
         #search among frontier nodes
         #self.search()
 
@@ -81,7 +83,7 @@ class UniformCostSearch:
         
         for parent in self.explored:
             if node.parent_id == id(parent):
-                print(f"going from {chr(node.name+97)} to {chr(parent.name+97)}")
+                #print(f"going from {chr(node.name+97)} to {chr(parent.name+97)}")
                 self.unexplored_cities.remove(parent.name)
                 self.solution_path.append(parent.name)
                 self.checkGoal(parent)
@@ -106,7 +108,7 @@ if __name__=='__main__':
     while(True):
         solution = problem.search()
         if problem.solved:
-            print("*********************SOLVED!!!!***************************** ")
+            print("SOLVED!")
             break;
 
         if len(problem.frontier.queue) == 0: 
