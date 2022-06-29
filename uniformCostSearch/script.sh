@@ -6,6 +6,7 @@ $(> output.time)
 # Looping among the travel salesman instances
 for FILE in TSP_instances/*
 do
+  $(echo $FILE)
   $(echo $FILE >> output.time)
   $(time (python3 uniformCostSearch.py $FILE) &>> output.time)
   $(echo $'*****************************************************\n'>> output.time)

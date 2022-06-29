@@ -7,9 +7,9 @@ Solution path:
 Solution cost:
 1342
 
-real	0m0,270s
-user	0m0,134s
-sys	0m0,038s
+real	0m0,100s
+user	0m0,088s
+sys	0m0,012s
 *****************************************************
 
 TSP_instances/gr05.tsp
@@ -21,8 +21,8 @@ Solution path:
 Solution cost:
 1348
 
-real	0m0,092s
-user	0m0,080s
+real	0m0,095s
+user	0m0,083s
 sys	0m0,012s
 *****************************************************
 
@@ -35,9 +35,9 @@ Solution path:
 Solution cost:
 1352
 
-real	0m0,091s
-user	0m0,083s
-sys	0m0,008s
+real	0m0,098s
+user	0m0,081s
+sys	0m0,016s
 *****************************************************
 
 TSP_instances/gr07.tsp
@@ -49,9 +49,9 @@ Solution path:
 Solution cost:
 1372
 
-real	0m0,096s
-user	0m0,092s
-sys	0m0,004s
+real	0m0,102s
+user	0m0,085s
+sys	0m0,016s
 *****************************************************
 
 TSP_instances/gr08.tsp
@@ -63,9 +63,9 @@ Solution path:
 Solution cost:
 1372
 
-real	0m0,153s
-user	0m0,149s
-sys	0m0,004s
+real	0m0,160s
+user	0m0,148s
+sys	0m0,012s
 *****************************************************
 
 TSP_instances/gr09.tsp
@@ -77,33 +77,26 @@ Solution path:
 Solution cost:
 1702
 
-real	0m4,117s
-user	0m4,117s
-sys	0m0,000s
+real	0m4,303s
+user	0m4,283s
+sys	0m0,020s
 *****************************************************
 
 TSP_instances/gr10.tsp
 Problem: gr10
-
-SOLVED!
-Solution path:
-['a', 'd', 'i', 'g', 'h', 'f', 'c', 'e', 'j', 'b']
-Solution cost:
-1960
-
-real	1m37,020s
-user	1m36,978s
-sys	0m0,012s
-*****************************************************
-
-TSP_instances/gr11.tsp
-Problem: gr11
 
 Traceback (most recent call last):
   File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 118, in <module>
     solution = problem.search()
   File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 48, in search
     if self.checkGoal(self.nodeState):
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 87, in checkGoal
-    if node.parent_id == id(parent):
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 91, in checkGoal
+    self.checkGoal(parent)
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 91, in checkGoal
+    self.checkGoal(parent)
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 91, in checkGoal
+    self.checkGoal(parent)
+  [Previous line repeated 1 more time]
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 86, in checkGoal
+    for parent in self.explored:
 KeyboardInterrupt
