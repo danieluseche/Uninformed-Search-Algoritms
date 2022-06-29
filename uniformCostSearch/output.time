@@ -4,10 +4,12 @@ Problem: gr04
 SOLVED!
 Solution path:
 ['a', 'd', 'c', 'b']
+Solution cost:
+1342
 
-real	0m0,109s
-user	0m0,096s
-sys	0m0,012s
+real	0m0,270s
+user	0m0,134s
+sys	0m0,038s
 *****************************************************
 
 TSP_instances/gr05.tsp
@@ -16,10 +18,12 @@ Problem: gr05
 SOLVED!
 Solution path:
 ['a', 'd', 'c', 'e', 'b']
+Solution cost:
+1348
 
-real	0m0,101s
-user	0m0,097s
-sys	0m0,004s
+real	0m0,092s
+user	0m0,080s
+sys	0m0,012s
 *****************************************************
 
 TSP_instances/gr06.tsp
@@ -28,10 +32,12 @@ Problem: gr06
 SOLVED!
 Solution path:
 ['a', 'd', 'f', 'c', 'e', 'b']
+Solution cost:
+1352
 
-real	0m0,101s
-user	0m0,089s
-sys	0m0,012s
+real	0m0,091s
+user	0m0,083s
+sys	0m0,008s
 *****************************************************
 
 TSP_instances/gr07.tsp
@@ -40,10 +46,12 @@ Problem: gr07
 SOLVED!
 Solution path:
 ['a', 'd', 'g', 'f', 'c', 'e', 'b']
+Solution cost:
+1372
 
-real	0m0,105s
-user	0m0,093s
-sys	0m0,012s
+real	0m0,096s
+user	0m0,092s
+sys	0m0,004s
 *****************************************************
 
 TSP_instances/gr08.tsp
@@ -52,10 +60,12 @@ Problem: gr08
 SOLVED!
 Solution path:
 ['a', 'd', 'g', 'h', 'f', 'c', 'e', 'b']
+Solution cost:
+1372
 
-real	0m0,166s
-user	0m0,154s
-sys	0m0,012s
+real	0m0,153s
+user	0m0,149s
+sys	0m0,004s
 *****************************************************
 
 TSP_instances/gr09.tsp
@@ -64,10 +74,12 @@ Problem: gr09
 SOLVED!
 Solution path:
 ['a', 'd', 'i', 'g', 'h', 'f', 'c', 'e', 'b']
+Solution cost:
+1702
 
-real	0m4,292s
-user	0m4,280s
-sys	0m0,012s
+real	0m4,117s
+user	0m4,117s
+sys	0m0,000s
 *****************************************************
 
 TSP_instances/gr10.tsp
@@ -76,22 +88,22 @@ Problem: gr10
 SOLVED!
 Solution path:
 ['a', 'd', 'i', 'g', 'h', 'f', 'c', 'e', 'j', 'b']
+Solution cost:
+1960
 
-real	1m39,952s
-user	1m39,927s
-sys	0m0,020s
+real	1m37,020s
+user	1m36,978s
+sys	0m0,012s
 *****************************************************
 
 TSP_instances/gr11.tsp
 Problem: gr11
 
-SOLVED!
-Solution path:
-['a', 'd', 'i', 'g', 'h', 'f', 'c', 'k', 'e', 'j', 'b']
-
-real	31m47,820s
-user	31m47,244s
-sys	0m0,112s
-*****************************************************
-
-TSP_instances/gr12.tsp
+Traceback (most recent call last):
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 118, in <module>
+    solution = problem.search()
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 48, in search
+    if self.checkGoal(self.nodeState):
+  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 87, in checkGoal
+    if node.parent_id == id(parent):
+KeyboardInterrupt

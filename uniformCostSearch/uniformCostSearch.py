@@ -21,6 +21,7 @@ class UniformCostSearch:
         self.explored = set()
         self.solved = False
         self.solution_path = []
+        self.solution_cost = 0
 
     def search(self):
 
@@ -75,6 +76,7 @@ class UniformCostSearch:
             #print("found root")
             if len(self.unexplored_cities) == 0:
                 self.solution_path.reverse()
+                self.computeCost()
                 self.solved = True
                 return True
             else:
@@ -88,6 +90,13 @@ class UniformCostSearch:
                 self.solution_path.append(parent.name)
                 self.checkGoal(parent)
             
+
+    def computeCost(self):
+        for i in range(len(self.solution_path)-1):
+            self.solution_cost += self.TSP.get_weight(self.solution_path[i], self.solution_path[i+1])
+            
+        self.solution_cost += self.TSP.get_weight(self.solution_path[-1], self.solution_path[0])
+        
 
     def TSP_load(filepath):
         with open(filepath):
@@ -117,3 +126,5 @@ if __name__=='__main__':
 
     print("Solution path:")
     print([chr(x + 97) for x in problem.solution_path])
+    print("Solution cost:")
+    print(problem.solution_cost)
