@@ -1,22 +1,97 @@
-TSP/gr04.tsp
-Problem: gr4
+TSP_instances/gr04.tsp
+Problem: gr04
 
 SOLVED!
 Solution path:
-['a', 'd', 'b', 'c']
+['a', 'd', 'c', 'b']
 
-real	0m0,106s
-user	0m0,087s
-sys	0m0,020s
-*****************************************************\n
-TSP/gr10.tsp
+real	0m0,109s
+user	0m0,096s
+sys	0m0,012s
+*****************************************************
+
+TSP_instances/gr05.tsp
+Problem: gr05
+
+SOLVED!
+Solution path:
+['a', 'd', 'c', 'e', 'b']
+
+real	0m0,101s
+user	0m0,097s
+sys	0m0,004s
+*****************************************************
+
+TSP_instances/gr06.tsp
+Problem: gr06
+
+SOLVED!
+Solution path:
+['a', 'd', 'f', 'c', 'e', 'b']
+
+real	0m0,101s
+user	0m0,089s
+sys	0m0,012s
+*****************************************************
+
+TSP_instances/gr07.tsp
+Problem: gr07
+
+SOLVED!
+Solution path:
+['a', 'd', 'g', 'f', 'c', 'e', 'b']
+
+real	0m0,105s
+user	0m0,093s
+sys	0m0,012s
+*****************************************************
+
+TSP_instances/gr08.tsp
+Problem: gr08
+
+SOLVED!
+Solution path:
+['a', 'd', 'g', 'h', 'f', 'c', 'e', 'b']
+
+real	0m0,166s
+user	0m0,154s
+sys	0m0,012s
+*****************************************************
+
+TSP_instances/gr09.tsp
+Problem: gr09
+
+SOLVED!
+Solution path:
+['a', 'd', 'i', 'g', 'h', 'f', 'c', 'e', 'b']
+
+real	0m4,292s
+user	0m4,280s
+sys	0m0,012s
+*****************************************************
+
+TSP_instances/gr10.tsp
 Problem: gr10
 
 SOLVED!
 Solution path:
-['a', 'd', 'g', 'h', 'f', 'e', 'i', 'c', 'b', 'j']
+['a', 'd', 'i', 'g', 'h', 'f', 'c', 'e', 'j', 'b']
 
-real	0m31,306s
-user	0m31,285s
+real	1m39,952s
+user	1m39,927s
 sys	0m0,020s
-*****************************************************\n
+*****************************************************
+
+TSP_instances/gr11.tsp
+Problem: gr11
+
+SOLVED!
+Solution path:
+['a', 'd', 'i', 'g', 'h', 'f', 'c', 'k', 'e', 'j', 'b']
+
+real	31m47,820s
+user	31m47,244s
+sys	0m0,112s
+*****************************************************
+
+TSP_instances/gr12.tsp
