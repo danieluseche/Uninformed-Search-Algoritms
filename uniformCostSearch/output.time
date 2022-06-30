@@ -7,8 +7,8 @@ Solution path:
 Solution cost:
 1342
 
-real	0m0,100s
-user	0m0,088s
+real	0m0,105s
+user	0m0,093s
 sys	0m0,012s
 *****************************************************
 
@@ -21,9 +21,9 @@ Solution path:
 Solution cost:
 1348
 
-real	0m0,095s
-user	0m0,083s
-sys	0m0,012s
+real	0m0,106s
+user	0m0,090s
+sys	0m0,016s
 *****************************************************
 
 TSP_instances/gr06.tsp
@@ -35,8 +35,8 @@ Solution path:
 Solution cost:
 1352
 
-real	0m0,098s
-user	0m0,081s
+real	0m0,102s
+user	0m0,086s
 sys	0m0,016s
 *****************************************************
 
@@ -49,9 +49,9 @@ Solution path:
 Solution cost:
 1372
 
-real	0m0,102s
-user	0m0,085s
-sys	0m0,016s
+real	0m0,110s
+user	0m0,097s
+sys	0m0,012s
 *****************************************************
 
 TSP_instances/gr08.tsp
@@ -63,9 +63,9 @@ Solution path:
 Solution cost:
 1372
 
-real	0m0,160s
-user	0m0,148s
-sys	0m0,012s
+real	0m0,168s
+user	0m0,168s
+sys	0m0,000s
 *****************************************************
 
 TSP_instances/gr09.tsp
@@ -77,26 +77,50 @@ Solution path:
 Solution cost:
 1702
 
-real	0m4,303s
-user	0m4,283s
-sys	0m0,020s
+real	0m4,273s
+user	0m4,254s
+sys	0m0,016s
 *****************************************************
 
 TSP_instances/gr10.tsp
 Problem: gr10
 
-Traceback (most recent call last):
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 118, in <module>
-    solution = problem.search()
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 48, in search
-    if self.checkGoal(self.nodeState):
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 91, in checkGoal
-    self.checkGoal(parent)
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 91, in checkGoal
-    self.checkGoal(parent)
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 91, in checkGoal
-    self.checkGoal(parent)
-  [Previous line repeated 1 more time]
-  File "/home/ignacio/Documentos/UNET/2022_1/InteligenciArtificial/s6/UninformedSearchAlgorithms/uniformCostSearch/uniformCostSearch.py", line 86, in checkGoal
-    for parent in self.explored:
-KeyboardInterrupt
+SOLVED!
+Solution path:
+['a', 'd', 'i', 'g', 'h', 'f', 'c', 'e', 'j', 'b']
+Solution cost:
+1960
+
+real	1m38,412s
+user	1m38,367s
+sys	0m0,040s
+*****************************************************
+
+TSP_instances/gr11.tsp
+Problem: gr11
+
+SOLVED!
+Solution path:
+['a', 'd', 'i', 'g', 'h', 'f', 'c', 'k', 'e', 'j', 'b']
+Solution cost:
+1962
+
+real	29m20,825s
+user	29m19,930s
+sys	0m0,328s
+*****************************************************
+
+TSP_instances/gr12.tsp
+Problem: gr12
+
+SOLVED!
+Solution path:
+['a', 'd', 'l', 'i', 'g', 'h', 'f', 'c', 'k', 'e', 'j', 'b']
+Solution cost:
+2122
+
+real	651m8,362s
+user	651m0,441s
+sys	0m3,180s
+*****************************************************
+
